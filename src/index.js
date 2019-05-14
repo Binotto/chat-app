@@ -28,6 +28,7 @@ io.on('connection', (socket) => {
         const filter = new Filter()
 
         if(filter.isProfane(message)){
+            socket.emit('message', generateMessage('Shut up mother fucker, Profanity is not allowed!'))
             return callback('Shut up mother fucker, Profanity is not allowed!')
         }
 
