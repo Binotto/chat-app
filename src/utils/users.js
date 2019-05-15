@@ -5,7 +5,7 @@ const users = []
 const addUser = ({ id, username, room }) => {
     //clean the data
     username = username.trim().toLowerCase()
-    room = room.trim().toLowerCase
+    room = room.trim().toLowerCase()
 
     //Validate the data
     if(!username || !room){
@@ -30,7 +30,16 @@ const addUser = ({ id, username, room }) => {
     const user = { id, username, room}
     users.push(user)
     return { user }
-} 
+}
+
+const getUsers = (id) => {
+    return users.find((user) => user.id === id)
+}
+
+const getUsersInRoom = (room) => {
+    room = room.trim().toLowerCase()
+    return users.filter((user) => user.room === room)
+}
 
 const removeUser = (id) => {
     const index = users.findIndex((user) => user.id === id)
@@ -40,13 +49,10 @@ const removeUser = (id) => {
     }
 }
 
-addUser({
-    id: 22,
-    username: 'Matheus Binotto',
-    room: 'Paraná'
-})
 
-const removedUser = removeUser(22)
-
-console.log(removedUser)
-console.log(users)
+module.exports = {
+    addUser,
+    removeUser,
+    getUsers,
+    getUsersInRoom
+}
