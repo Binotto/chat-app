@@ -32,7 +32,7 @@ const addUser = ({ id, username, room }) => {
     return { user }
 }
 
-const getUsers = (id) => {
+const getUser = (id) => {
     return users.find((user) => user.id === id)
 }
 
@@ -53,6 +53,6 @@ const removeUser = (id) => {
 module.exports = {
     addUser,
     removeUser,
-    getUsers,
+    getUser,
     getUsersInRoom
 }
