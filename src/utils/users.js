@@ -3,10 +3,6 @@ const users = []
 //addUser, removeUser, getUsers, getUsersInRoom
 
 const addUser = ({ id, username, room }) => {
-    //clean the data
-    username = username.trim().toLowerCase()
-    room = room.trim().toLowerCase()
-
     //Validate the data
     if(!username || !room){
         return {
@@ -14,6 +10,10 @@ const addUser = ({ id, username, room }) => {
         }
     }
 
+    //clean the data
+    username = username.trim().toLowerCase()
+    room = room.trim().toLowerCase()
+    
     //Check for existing user
     const existingUser = users.find((user) => {
         return user.room === room && user.username === username
