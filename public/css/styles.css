@@ -17,7 +17,7 @@ input {
 body {
     line-height: 1.4;
     color: #333333;
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: 'Audiowide', sans-serif;
 }
 
 h1 {
@@ -40,6 +40,7 @@ input {
 button {
     cursor: pointer;
     padding: 12px;
+    font-family: 'Audiowide', sans-serif;
     background: #7C5CBF;
     border: none;
     color: white;
@@ -56,12 +57,13 @@ button:disabled {
     background: #7c5cbf94;
 }
 
+
 /* Join Page Styles */
 
 .centered-form {
-    background: #333744;
+    background: #1727AE;
     width: 100vw;
-    height: 100vh;   
+    height: 90vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -83,6 +85,7 @@ button:disabled {
     width: 100%;
 }
 
+
 /* Chat Page Layout */
 
 .chat {
@@ -96,6 +99,7 @@ button:disabled {
     width: 225px;
     overflow-y: scroll
 }
+
 
 /* Chat styles */
 
@@ -112,10 +116,11 @@ button:disabled {
     overflow-y: scroll;
 }
 
+
 /* Message Styles */
 
 .message {
-    margin-bottom: 16px;   
+    margin-bottom: 16px;
 }
 
 .message__name {
@@ -132,6 +137,7 @@ button:disabled {
 .message a {
     color: #0070CC;
 }
+
 
 /* Message Composition Styles */
 
@@ -160,13 +166,14 @@ button:disabled {
     font-size: 14px;
 }
 
+
 /* Chat Sidebar Styles */
 
 .room-title {
     font-weight: 400;
     font-size: 22px;
     background: #2c2f3a;
-    padding: 24px;   
+    padding: 24px;
 }
 
 .list-title {
@@ -180,4 +187,22 @@ button:disabled {
     list-style-type: none;
     font-weight: 300;
     padding: 12px 24px 0 24px;
+}
+
+.footer {
+    background-color: #20222b;
+    width: 100vw;
+    height: 10vh;
+    text-decoration: none;
+    color: white;
+}
+
+.footer_github {
+    text-decoration: none;
+    color: white;
+}
+
+.footer_linkedin {
+    text-decoration: none;
+    color: white;
 }
